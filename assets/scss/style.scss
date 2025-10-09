@@ -1,0 +1,24 @@
+@use 'var';
+@use 'breakpoints';
+
+@use 'reset';
+@use 'fonts';
+@use 'default';
+@use 'button';
+
+@use 'components/container';
+@use 'components/header';
+@use 'components/main';
+@use 'components/footer';
+
+/*
+@use 'components/section';
+
+@use 'components/index';
+@use 'components/about';
+@use 'components/steps';
+@use 'components/features';
+ */
+
+//@use 'components/hero';
+//@use 'components/faq';

@@ -1,0 +1,226 @@
+@use '../var' as *;
+@use '../breakpoints' as *;
+
+
+/* ===== HEADER ===== */
+.header {
+  width: 100%;
+  min-width: $min-width;
+  max-width: $max-width;
+  height: 76px;
+  padding: 16px 0;
+  margin: 0 auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    cursor: default;
+    @include user-select;
+  }
+
+  &__logo {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: block;
+
+    a {
+      display: block;
+      outline: none;
+    }
+
+    img {
+      width: 92px;
+      height: 36px;
+      display: block;
+      @include user-select;
+      @include user-drag;
+    }
+  }
+
+  &__nav {
+    @include media-breakpoint-down(xl) {
+      min-width: $min-width;
+      display: none;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+
+      &.visible {
+        display: flex;
+      }
+      &.open {
+        .header__overlay {opacity: .5;}
+        .header__space {transform: translate3d(0, 0, 0);}
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: $color-chinese;
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
+
+  &__space {
+    @include media-breakpoint-down(xl) {
+      width: 80%;
+      max-width: 320px;
+      padding: 24px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      position: relative;
+      z-index: 5;
+      background: black;
+      transform: translate3d(-100%, 0, 0);
+      transition: transform .4s ease;
+    }
+    @include media-breakpoint-up(xl) {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 22px;
+    line-height: 120%;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      gap: 5px;
+      font-size: 18px;
+    }
+
+    a {
+      padding: 12px;
+      display: block;
+      color: white;
+      text-decoration: none;
+      transition: color $effect;
+      outline: none;
+
+      &:hover, &:focus {
+        color: white;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+    display: flex;
+    display: none;
+    gap: 12px;
+    position: absolute;
+    top: 45px;
+    right: 90px;
+
+    a {
+      display: block;
+      outline: none;
+    }
+
+    img {
+      display: block;
+      @include user-select;
+      @include user-drag;
+      @include media-breakpoint-down(xl) {
+        width: auto;
+        height: 23px;
+      }
+    }
+  }
+
+  &__close {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 5;
+    background: black url("data:image/svg+xml,%3Csvg width='30' height='30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.82 14.184V6h-1.636v8.184H6v1.636h8.184V24h1.636v-8.18H24v-1.636h-8.18Z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center center;
+    transform: rotate(45deg);
+    transition: transform $effect-s;
+    cursor: pointer;
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    cursor: pointer;
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    &::before, span::before, span::after {
+      @include pseudo;
+      width: 28px;
+      height: 4px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: black;
+    }
+    span::before {
+      top: 18px;
+    }
+    span::after {
+      bottom: 18px;
+    }
+  }
+}

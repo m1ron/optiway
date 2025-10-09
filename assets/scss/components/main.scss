@@ -1,0 +1,9 @@
+@use '../var' as *;
+@use '../breakpoints' as *;
+
+/* ===== MAIN ===== */
+.main {
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
