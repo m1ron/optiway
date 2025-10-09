@@ -1,16 +1,15 @@
 @use 'base/var';
 @use 'base/breakpoints';
 @use 'base/reset';
-@use 'base/fonts';
 @use 'base/default';
-
-@use 'components/button';
-@use 'components/stars';
 
 @use 'layout/container';
 @use 'layout/header';
 @use 'layout/main';
 @use 'layout/footer';
+
+@use 'components/button';
+@use 'components/stars';
 
 @use 'blocks/hero';
 

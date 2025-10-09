@@ -11,23 +11,46 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 16px;
   line-height: 1.5;
   color: $color-white;
   text-align: center;
   text-decoration: none;
   background: $color-blue;
-  transition: color $effect, background-color $effect;
+  transition: color $effect, box-shadow $effect, background-color $effect;
   outline: none;
   cursor: pointer;
 
   @media (hover: hover) {
-    &:hover {
-      background-color: $color-navy;
+    &:not([disabled]) {
+      &:hover, &:focus {
+        background-color: $color-navy;
+      }
     }
-    &:focus {
-      background-color: $color-navy;
+  }
+
+  &[disabled] {
+    opacity: .3;
+    cursor: default;
+  }
+
+  &--outline {
+    color: $color-charcoal-blue;
+    background: $color-white;
+    box-shadow: 0 0 0 1px inset $color-charcoal-light;
+
+
+    @media (hover: hover) {
+      &:hover, &:focus {
+        &:not([disabled]) {
+          &:hover, &:focus {
+            box-shadow: 0 0 0 1px inset $color-light-gray;
+            background-color: $color-white;
+          }
+        }
+      }
     }
+
   }
 }
