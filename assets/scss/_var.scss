@@ -12,9 +12,8 @@ $grid-breakpoints: (
   sm: 572px,
   md: 768px,
   lg: 992px,
-  xl: 1340px,
-  xxl: 1600px,
-  xxxl: 1900px
+  xl: 1280px,
+  xxl: 1440px
 ) !default;
 
 // Paths
@@ -25,23 +24,25 @@ $fonts: '../fonts';
 $font-default: 'Rubik', sans-serif;
 
 // Colors
-$color-black: #20242a;
+$color-black: #000;
+$color-dark: #20242a;
 $color-gray: #687283;
+$color-medium-gray: #79798f;
+$color-light-gray: #8c94a0;
+$color-neutral: #f5f5fe;
+$color-white: #fff;
+
+$color-blue: #4141e7;
+$color-navy: #1b1b96;
+$color-lavender: #d2d2f8;
 
 $color-chinese: #0d1217;
-$color-neutral: #f9f7f6;
-$color-green: #c0debc;
-$color-medium-green: #31aa47;
-$color-blue: #c3dae8;
-$color-yellow: #fcbf00;
-$color-yellow-hover: #ffd633;
-$color-yellow-focus: #e6b800;
 
 // Transition Settings
 $bezier: cubic-bezier(.250, .460, .450, .940);
 $easing: ease;
 $effect: .3s $easing;
-$effect-s: .1s $easing;
+$effect-s: .15s $easing;
 
 // Mixins
 @mixin pseudo {content: '';display: block;overflow: hidden;}

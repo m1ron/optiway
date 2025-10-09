@@ -7,13 +7,13 @@
   padding: 0 16px;
   margin: 0 auto;
   @include media-breakpoint-up(md) {
-    max-width: 752px;
+    max-width: 736px;
   }
   @include media-breakpoint-up(lg) {
     max-width: 992px;
   }
   @include media-breakpoint-up(xl) {
-    max-width: 1320px;
+    max-width: 1200px;
     padding: 0 20px;
   }
 }

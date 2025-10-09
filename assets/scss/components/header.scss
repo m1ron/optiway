@@ -15,11 +15,25 @@
   left: 0;
   z-index: 100;
   background: white;
+  @include media-breakpoint-up(md) {
+    height: 82px;
+    padding: 20px 0;
+  }
 
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+    @include media-breakpoint-down(xl) {
+      max-width: none;
+    }
+    @include media-breakpoint-up(md) {
+      @include media-breakpoint-down(xl) {
+        padding-right: 32px;
+        padding-left: 32px;
+      }
+    }
   }
 
   &__title {
@@ -51,6 +65,10 @@
       display: block;
       @include user-select;
       @include user-drag;
+      @include media-breakpoint-up(md) {
+        width: 106px;
+        height: 42px;
+      }
     }
   }
 
@@ -146,26 +164,15 @@
   }
 
   &__button {
-    margin-top: auto;
-    display: flex;
-    display: none;
-    gap: 12px;
-    position: absolute;
-    top: 45px;
-    right: 90px;
+    margin-left: auto;
 
-    a {
-      display: block;
-      outline: none;
-    }
+    .btn {
+      gap: 0;
 
-    img {
-      display: block;
-      @include user-select;
-      @include user-drag;
-      @include media-breakpoint-down(xl) {
-        width: auto;
-        height: 23px;
+      span {
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
       }
     }
   }
@@ -191,7 +198,7 @@
     height: 44px;
     position: relative;
     cursor: pointer;
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(md) {
       display: none;
     }
 
@@ -206,21 +213,22 @@
 
     &::before, span::before, span::after {
       @include pseudo;
-      width: 28px;
-      height: 4px;
+      width: 20px;
+      height: 1.5px;
+      border-radius: 2px;
       margin: auto;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
-      background: black;
+      background: $color-light-gray;
     }
     span::before {
-      top: 18px;
+      top: 10px;
     }
     span::after {
-      bottom: 18px;
+      bottom: 10px;
     }
   }
 }

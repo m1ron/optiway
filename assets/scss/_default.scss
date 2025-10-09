@@ -32,7 +32,7 @@ body {
 }
 
 a {
-  color: $color-black;
+  color: $color-dark;
   text-decoration: underline;
   text-decoration-thickness: .0625em;
   text-decoration-color: inherit;
@@ -40,7 +40,7 @@ a {
   transition: text-decoration-color $effect-s;
   @media (hover: hover) {
     &:hover, &:focus {
-      text-decoration-color: rgba($color-black, 0);
+      text-decoration-color: rgba($color-dark, 0);
     }
   }
 }
