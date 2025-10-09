@@ -1,0 +1,13 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+
+/* ===== HERO ===== */
+.hero {
+  padding: 60px 0;
+
+  &__content {
+    color: $color-dark-gray;
+    text-align: center;
+  }
+}

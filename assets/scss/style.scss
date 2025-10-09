@@ -1,24 +1,24 @@
-@use 'var';
-@use 'breakpoints';
+@use 'base/var';
+@use 'base/breakpoints';
+@use 'base/reset';
+@use 'base/fonts';
+@use 'base/default';
 
-@use 'reset';
-@use 'fonts';
-@use 'default';
-@use 'button';
+@use 'components/button';
+@use 'components/stars';
 
-@use 'components/container';
-@use 'components/header';
-@use 'components/main';
-@use 'components/footer';
+@use 'layout/container';
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/footer';
+
+@use 'blocks/hero';
 
 /*
-@use 'components/section';
-
-@use 'components/index';
-@use 'components/about';
-@use 'components/steps';
-@use 'components/features';
+@use 'blocks/section';
+@use 'blocks/index';
+@use 'blocks/about';
+@use 'blocks/steps';
+@use 'blocks/features';
+@use 'blocks/faq';
  */
-
-//@use 'components/hero';
-//@use 'components/faq';

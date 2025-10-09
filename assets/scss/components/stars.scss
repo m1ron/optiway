@@ -1,0 +1,33 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $color-white;
+  text-align: center;
+  text-decoration: none;
+  background: $color-blue;
+  transition: color $effect, background-color $effect;
+  outline: none;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $color-navy;
+    }
+    &:focus {
+      background-color: $color-navy;
+    }
+  }
+}

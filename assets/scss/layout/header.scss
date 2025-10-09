@@ -1,5 +1,5 @@
-@use '../var' as *;
-@use '../breakpoints' as *;
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
 
 
 /* ===== HEADER ===== */
@@ -73,6 +73,7 @@
   }
 
   &__nav {
+    display: none !important;
     @include media-breakpoint-down(xl) {
       min-width: $min-width;
       display: none;
