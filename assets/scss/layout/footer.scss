@@ -52,6 +52,18 @@
     @include media-breakpoint-down(xss) {
       right: 16px;
     }
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 120px;
+      height: 40px;
+      display: block;
+      @include user-drag;
+      @include user-select;
+    }
   }
 
   &__line {

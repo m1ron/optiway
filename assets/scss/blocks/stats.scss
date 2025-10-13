@@ -1,0 +1,61 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+/* ===== STATS ===== */
+.stats {
+  padding: 40px 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  li {
+    width: 226px;
+    padding-left: 64px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    svg {
+      height: 48px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    em {
+      display: block;
+      font-size: 28px;
+      line-height: 36px;
+      font-style: normal;
+      letter-spacing: -.005em;
+      color: $color-dark;
+
+      @include media-breakpoint-up(md) {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 48px;
+      }
+    }
+
+    span {
+      margin-right: -5px;
+      display: block;
+      font-size: 18px;
+      line-height: 28px;
+      color: $color-dark-gray;
+    }
+  }
+}
