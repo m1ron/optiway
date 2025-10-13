@@ -1,7 +1,6 @@
 @use '../base/var' as *;
 @use '../base/breakpoints' as *;
 
-
 /* ===== BUTTONS ===== */
 .btn {
   padding: 8px 16px;
@@ -45,12 +44,11 @@
       &:hover, &:focus {
         &:not([disabled]) {
           &:hover, &:focus {
-            box-shadow: 0 0 0 1px inset $color-light-gray;
+            box-shadow: 0 0 0 1px inset $color-charcoal-gray;
             background-color: $color-white;
           }
         }
       }
     }
-
   }
 }

@@ -60,7 +60,15 @@ h1, .h1 {
   line-height: 1.33333;
   text-align: center;
   color: $color-darker;
-  letter-spacing: -0.005em;
+  letter-spacing: -.005em;
+  @include media-breakpoint-down(xss) {
+    font-size: 32px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
+    line-height: 70px;
+    letter-spacing: -.01em;
+  }
 }
 h2, .h2 {
   font-size: 28px;
