@@ -34,6 +34,11 @@
     cursor: default;
   }
 
+  &--large {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
   &--outline {
     color: $color-charcoal-blue;
     background: $color-white;

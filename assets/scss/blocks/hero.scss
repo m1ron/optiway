@@ -35,6 +35,8 @@
     justify-content: center;
     align-items: center;
     gap: .5rem;
+    font-size: 16px;
+    line-height: 1.5em;
     color: $color-gray;
     cursor: default;
     @include media-breakpoint-down(xss) {
@@ -91,8 +93,6 @@
     }
 
     .btn {
-      font-size: 18px;
-      line-height: 28px;
       white-space: nowrap;
       @include media-breakpoint-down(md) {
         width: 232px;
@@ -104,7 +104,7 @@
     }
   }
 
-  &__picture {
+  &__image {
     width: 100%;
     margin-top: 40px;
     display: block;
@@ -131,9 +131,9 @@
       @include media-breakpoint-up(sm) {
         border-radius: 24px;
         aspect-ratio: 520/404;
-      }
-      @include media-breakpoint-up(lg) {
-        height: auto;
+        @include media-breakpoint-down(xl) {
+          height: auto;
+        }
       }
     }
   }
