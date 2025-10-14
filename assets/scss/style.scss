@@ -9,9 +9,11 @@
 @use 'layout/footer';
 
 @use 'components/button';
+@use 'components/forms';
 @use 'components/stars';
 
 @use 'blocks/hero';
+@use 'blocks/cta';
 @use 'blocks/stats';
 @use 'blocks/feature';
 @use 'blocks/steps';

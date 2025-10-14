@@ -1,0 +1,19 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+
+/* ===== FORMS ===== */
+.form {
+  &-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid $color-charcoal-light;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-charcoal-blue;
+    background: $color-white;
+    outline: none;
+    transition: border-color $effect;
+  }
+}
