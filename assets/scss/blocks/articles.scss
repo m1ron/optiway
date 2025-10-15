@@ -1,15 +1,15 @@
 @use '../base/var' as *;
 @use '../base/breakpoints' as *;
 
-/* ===== articles ===== */
+/* ===== ARTICLES ===== */
 .articles {
-  margin: 60px 0;
+  padding: 60px 0;
   position: relative;
   @include media-breakpoint-up(md) {
-    margin: 100px 0 200px;
+    padding: 120px 0;
   }
   @include media-breakpoint-up(xl) {
-    margin-bottom: 160px;
+    padding: 90px 0;
   }
 
   &__header {
@@ -35,8 +35,11 @@
       width: auto;
       margin: 0;
       position: absolute;
-      top: 3px;
+      top: 123px;
       right: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      top: 93px;
     }
   }
 }
