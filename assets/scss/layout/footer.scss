@@ -77,6 +77,9 @@
     @include media-breakpoint-up(md) {
       margin: 20px 0 28px;
     }
+    @include media-breakpoint-up(lg) {
+      margin-top: 27px;
+    }
   }
 
   &__menu {
@@ -90,6 +93,9 @@
       margin-left: auto;
       display: flex;
       gap: 41px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
     }
 
     li {
