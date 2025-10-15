@@ -81,6 +81,11 @@
     .btn {
       color: $color-blue;
       background-color: $color-white;
+
+      &:hover, &:focus {
+        color: $color-blue;
+        background-color: $color-white;
+      }
     }
   }
 
@@ -123,6 +128,7 @@
           }
         }
       }
+
       &__heading {
         @include media-breakpoint-down(lg) {
           font-size: 28px;
@@ -133,12 +139,14 @@
           line-height: 32px;
         }
       }
+
       &__gray {
         @include media-breakpoint-up(lg) {
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
         }
       }
+
       &__blue {
         @include media-breakpoint-up(lg) {
           border-top-left-radius: 0;
@@ -150,11 +158,16 @@
           }
         }
       }
+
       &__map {
         width: 309px;
+        border: 1px solid $color-lavender;
+        border-radius: 20px;
         margin-top: -24px;
         margin-bottom: -24px;
+        overflow: hidden;
         @include media-breakpoint-down(lg) {
+          height: 343px;
           margin: 0;
           position: absolute;
           bottom: -30px;
@@ -166,8 +179,11 @@
         }
 
         img {
+          width: 100%;
           height: 100%;
           display: block;
+          object-fit: cover;
+          object-position: center center;
         }
       }
     }
