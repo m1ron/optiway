@@ -1,0 +1,16 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+/* ===== HEAD ===== */
+.head {
+  margin-bottom: 40px;
+  color: $color-charcoal-blue;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}

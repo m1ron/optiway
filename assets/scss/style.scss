@@ -11,19 +11,20 @@
 @use 'components/button';
 @use 'components/forms';
 @use 'components/stars';
+@use 'components/head';
 
 @use 'blocks/hero';
-@use 'blocks/cta';
 @use 'blocks/stats';
 @use 'blocks/feature';
 @use 'blocks/steps';
+@use 'blocks/features';
 @use 'blocks/articles';
+
+@use 'blocks/cta';
 
 /*
 @use 'blocks/section';
 @use 'blocks/index';
 @use 'blocks/about';
-@use 'blocks/steps';
-@use 'blocks/features';
 @use 'blocks/faq';
  */

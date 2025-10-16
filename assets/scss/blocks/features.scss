@@ -1,0 +1,206 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+/* ===== FEATURES ===== */
+.features {
+  padding: 100px 0;
+  @include media-breakpoint-up(md) {
+    padding: 100px 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include media-breakpoint-up(xl) {
+      flex-direction: row;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include media-breakpoint-up(xl) {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__entry {
+    width: 100%;
+    max-width: 342px;
+    padding: 24px;
+    border-radius: 24px;
+    margin: 0 auto;
+    position: relative;
+    color: $color-charcoal-blue;
+    background: $color-neutral;
+    @include media-breakpoint-up(md) {
+      max-width: none;
+      min-height: 237px;
+      display: flex;
+      gap: 16px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include media-breakpoint-up(lg) {
+      gap: 24px;
+    }
+
+    p {
+      &:last-of-type {margin-bottom: 0;}
+    }
+
+    &--blue {
+      color: white;
+      background: $color-blue;
+
+      h2, .h2, h3, .h3 {
+        color: inherit;
+      }
+    }
+  }
+
+  &__image {
+    height: 178px;
+    border-radius: 12px 0 23px 0;
+    margin: 21px -24px -24px 24px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
+      width: 337px;
+      height: 213px;
+      margin-top: 0;
+      margin-left: 0;
+      flex-shrink: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 365px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 375px;
+      height: auto;
+      margin-top: auto;
+    }
+
+    img {
+      display: block;
+      @include user-drag;
+      @include user-select;
+    }
+  }
+
+  &__col:first-child {
+    @include media-breakpoint-up(xl) {
+      width: 472px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__col:first-child &__entry {
+    @include media-breakpoint-up(xl) {
+      flex: 1;
+      flex-direction: column;
+    }
+  }
+  &__col:first-child &__entry &__image {
+    @include media-breakpoint-up(md) {
+      @include media-breakpoint-down(lg) {
+        margin-left: auto;
+        padding-left: 48px;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      border-radius: 8px;
+      margin: auto auto 0;
+    }
+  }
+
+  &__col:last-child &__entry:first-child {
+    @include media-breakpoint-up(xl) {
+      order: 2;
+    }
+  }
+
+  &__col:last-child &__entry:first-child &__image {
+    @include media-breakpoint-up(md) {
+      height: 195px;
+      margin-top: 18px;
+      margin-left: auto;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 301px;
+    }
+  }
+
+  &__col:last-child &__entry:last-child {
+    @include media-breakpoint-up(md) {
+      flex-direction: column;
+    }
+    @include media-breakpoint-up(xl) {
+      order: 1;
+    }
+  }
+
+  &__import {
+    margin-top: 7px;
+    cursor: default;
+    @include media-breakpoint-up(md) {
+      margin-top: auto;
+      display: flex;
+      gap: 16px;
+    }
+
+    em {
+      width: 100%;
+      max-width: 275px;
+      height: 50px;
+      padding: 11px;
+      border: 1px solid $color-charcoal-light;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      color: $color-blue;
+      font-style: normal;
+      background: white;
+      @include user-select;
+
+      svg {
+        width: 25px;
+        height: 26px;
+        display: block;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 19px 0 13px;
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+        gap: 6px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 14px;
+      }
+
+      svg {
+        display: block;
+        @include media-breakpoint-up(md) {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+  }
+}

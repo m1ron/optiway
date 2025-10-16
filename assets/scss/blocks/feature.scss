@@ -17,6 +17,7 @@
   }
 
   &__content {
+    color: $color-charcoal-blue;
     text-align: center;
     @include media-breakpoint-up(lg) {
       text-align: left;
