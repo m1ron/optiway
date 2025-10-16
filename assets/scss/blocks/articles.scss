@@ -19,6 +19,7 @@
   }
 
   &__list {
+    overflow: hidden;
     display: flex;
     gap: 20px;
   }
