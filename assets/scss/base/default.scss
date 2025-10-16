@@ -41,7 +41,7 @@ a {
   text-decoration-thickness: .0625em;
   text-decoration-color: inherit;
   text-underline-offset: .167em;
-  transition: text-decoration-color $effect-s;
+  transition: text-decoration-color $effect-s, color $effect;
   @media (hover: hover) {
     &:hover, &:focus {
       text-decoration-color: rgba($color-dark, 0);

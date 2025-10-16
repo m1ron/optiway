@@ -158,8 +158,10 @@
       transition: color $effect;
       outline: none;
 
-      &:hover, &:focus {
-        color: white;
+      @media (hover: hover) {
+        &:hover, &:focus {
+          color: white;
+        }
       }
     }
   }
