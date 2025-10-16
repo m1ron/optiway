@@ -12,6 +12,9 @@ html {
   height: 100%;
   background: white;
   scroll-padding-top: 76px;
+  @include media-breakpoint-up(md) {
+    scroll-padding-top: 82px;
+  }
 }
 
 body {
