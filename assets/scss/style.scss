@@ -13,6 +13,7 @@
 @use 'components/stars';
 @use 'components/head';
 @use 'components/tags';
+@use 'components/meta';
 
 @use 'blocks/page-header';
 
@@ -25,6 +26,10 @@
 @use 'blocks/testimonials';
 @use 'blocks/articles';
 @use 'blocks/cta';
+
 @use 'blocks/featured-article';
+
+@use 'blocks/post-header';
+@use 'blocks/post';
 @use 'blocks/help';
 @use 'blocks/help-stats';

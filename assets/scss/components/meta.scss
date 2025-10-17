@@ -1,0 +1,75 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+/* ===== META ===== */
+.meta {
+  &-item {
+    margin-bottom: 24px;
+
+    strong {
+      margin-bottom: 12px;
+      display: block;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: $color-gray;
+    }
+  }
+
+  &-tags {
+    padding: 0 0 8px;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .001em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 4px;
+    @include media-breakpoint-up(xl) {
+      gap: 4px;
+    }
+
+    li {
+      padding: 6px 12px;
+      border-radius: 40px;
+      display: block;
+      color: $color-darker;
+      white-space: nowrap;
+      background-color: $color-mist;
+      cursor: default;
+    }
+  }
+
+  &-links {
+    padding: 0;
+    margin: -8px 0 -12px;
+    list-style: none;
+
+    li {
+      padding: 12px 0;
+
+      & + li {
+        box-shadow: 0 -1px 0 0 $color-mist;
+      }
+    }
+
+    a {
+      display: block;
+      color: $color-gray;
+      text-decoration: none;
+      @media (hover: hover) {
+        &:hover {
+          color: $color-dark;
+        }
+      }
+
+      &:focus, &:active {
+        color: $color-dark;
+      }
+    }
+
+    li.active a {
+      color: $color-dark;
+    }
+  }
+}
