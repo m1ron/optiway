@@ -8,7 +8,15 @@
   flex-direction: column;
   gap: 40px;
   @include media-breakpoint-up(md) {
-    padding: 80px 0;
+    padding: 80px 0 40px;
+  }
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+  @include media-breakpoint-up(xl) {
+    gap: 100px;
   }
 
   &__back {
@@ -20,27 +28,48 @@
     font-size: 16px;
     line-height: 1.5;
     display: none;
+    cursor: default;
     @include media-breakpoint-up(md) {
       display: block;
     }
 
     em {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       font-style: normal;
+
+      svg {
+        display: block;
+      }
     }
   }
 
   h2, .h2 {
-    margin-bottom: 20px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 12px;
+    }
   }
 
   &__content {
     color: $color-charcoal-gray;
+    @include media-breakpoint-up(lg) {
+      color: $color-dark-gray;
+    }
+
     *:last-child {margin-bottom: 0 !important;}
   }
 
   &__image {
     width: 100%;
     display: block;
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 340px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 0;
+      flex: 0 0 472px;
+    }
 
     img {
       max-width: 100%;

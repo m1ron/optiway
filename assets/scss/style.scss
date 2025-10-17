@@ -14,6 +14,7 @@
 @use 'components/head';
 @use 'components/tags';
 @use 'components/meta';
+@use 'components/social';
 
 @use 'blocks/page-header';
 
@@ -31,5 +32,6 @@
 
 @use 'blocks/post-header';
 @use 'blocks/post';
+
 @use 'blocks/help';
 @use 'blocks/help-stats';
