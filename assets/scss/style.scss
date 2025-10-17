@@ -5,13 +5,16 @@
 
 @use 'layout/container';
 @use 'layout/header';
-@use 'layout/main';
+@use 'layout/page';
 @use 'layout/footer';
 
 @use 'components/button';
 @use 'components/forms';
 @use 'components/stars';
 @use 'components/head';
+@use 'components/tags';
+
+@use 'blocks/page-header';
 
 @use 'blocks/hero';
 @use 'blocks/stats';
@@ -22,4 +25,3 @@
 @use 'blocks/testimonials';
 @use 'blocks/articles';
 @use 'blocks/cta';
-@use 'blocks/page-header';

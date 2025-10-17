@@ -209,6 +209,7 @@
         margin: 0;
         overflow: hidden;
         @include media-breakpoint-down(lg) {
+          border-radius: 20px;
           position: absolute;
           bottom: 79px;
           right: 11px;

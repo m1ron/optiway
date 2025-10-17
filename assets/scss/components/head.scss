@@ -13,4 +13,21 @@
   &--center {
     text-align: center;
   }
+
+  &--smaller {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+
+    h2, .h2 {
+      @include media-breakpoint-down(lg) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
 }
