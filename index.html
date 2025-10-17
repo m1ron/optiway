@@ -33,9 +33,9 @@
         <nav class="header__nav">
             <div class="header__space">
                 <menu class="header__menu">
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">One Account</a></li>
-                    <li><a href="#">FAQs</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="help.html" title="Help Center">Help Center</a></li>
                 </menu>
                 <div class="header__close"></div>
             </div>
@@ -142,7 +142,7 @@
                     <section class="features__entry features__entry--blue">
                         <header class="features__head">
                             <h3>One-tap navigation</h3>
-                            <p>Open routes instantly in Apple Maps, Google Maps, Waze, or Here WeGo.</p>
+                            <p>Open routes instantly in Apple Maps, Google&nbsp;Maps, Waze, or Here WeGo.</p>
                         </header>
                         <picture class="features__image">
                             <img src="assets/img/features/navigation.webp" srcset="assets/img/features/navigation.webp 1x, assets/img/features/navigation@2x.webp 2x, assets/img/features/navigation@3x.webp 3x" width="375" height="195" alt="Optiway iPhone App" title="Optiway iPhone App - One-tap navigation" loading="lazy">
@@ -198,7 +198,7 @@
         </section>
 
         <section class="testimonials">
-            <header class="head head--center">
+            <header class="head">
                 <h2>Trusted by 100,000+ Drivers</h2>
                 <p>Whether you’re a single driver or a small team, planning routes should always be simple</p>
             </header>
@@ -231,48 +231,50 @@
             <header class="head">
                 <h2>Latest Articles</h2>
             </header>
-            <div class="articles__list">
-                <section class="article">
-                    <picture class="article__image">
-                    </picture>
-                    <time datetime="PT3M" class="article__time">3 min read</time>
-                    <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
-                    <p>Description</p>
-                </section>
-                <section class="article">
-                    <picture class="article__image">
-                    </picture>
-                    <time datetime="PT5M" class="article__time">5 min read</time>
-                    <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
-                    <p>Description</p>
-                </section>
-                <section class="article">
-                    <picture class="article__image">
-                    </picture>
-                    <time datetime="PT7M" class="article__time">7 min read</time>
-                    <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
-                    <p>Description</p>
-                </section>
+            <div class="articles__slider" data-active="0">
+                <div class="articles__list">
+                    <section class="article">
+                        <picture class="article__image">
+                        </picture>
+                        <time datetime="PT3M" class="article__time">3 min read</time>
+                        <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
+                        <p>Description</p>
+                    </section>
+                    <section class="article">
+                        <picture class="article__image">
+                        </picture>
+                        <time class="article__time">5 min read</time>
+                        <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
+                        <p>Description</p>
+                    </section>
+                    <section class="article">
+                        <picture class="article__image">
+                        </picture>
+                        <time datetime="PT7M" class="article__time">7 min read</time>
+                        <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
+                        <p>Description</p>
+                    </section>
+                </div>
             </div>
             <a href="blog.html" class="btn btn--outline articles__more" title="Visit Blog">Visit&nbsp;Blog <svg width="20" height="20"><use href="#arrow-right"></use></svg></a>
         </section>
 
-        <section class="cta cta--advanced">
-            <div class="cta__content cta--blue">
+        <div class="cta cta--advanced">
+            <section class="cta__content cta--blue">
                 <h2 class="cta__heading">Plan your first optimized route today</h2>
                 <p>Get the app now and optimize your first delivery route in minutes.</p>
                 <a href="#" class="btn" title="Download on iOS"><svg width="20" height="20"><use href="#apple-blue"></use></svg> Download on iOS</a>
-            </div>
+            </section>
             <div class="cta__map"><img src="assets/img/map.png" srcset="assets/img/map.png 1x, assets/img/map@2x.png 2x, assets/img/map@3x.png 3x" width="309" height="343" alt="Map" title="Map" loading="lazy"></div>
-            <div class="cta__content cta--gray">
+            <section class="cta__content cta--gray">
                 <h2 class="cta__heading">Android user? Be the first to get Optiway</h2>
                 <p>Android version is coming soon &mdash; join the waitlist to be the first to know.</p>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="" id="" placeholder="Enter email address">
+                <form action="#" class="form">
+                    <input class="form-control" type="email" maxlength="50" required value="" placeholder="Enter email address">
                     <button type="submit" class="btn">Send</button>
-                </div>
-            </div>
-        </section>
+                </form>
+            </section>
+        </div>
     </article>
 </main>
 

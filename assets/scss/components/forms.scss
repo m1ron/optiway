@@ -11,9 +11,26 @@
     border-radius: 8px;
     font-size: 16px;
     line-height: 24px;
-    color: $color-charcoal-blue;
+    color: $color-dark;
     background: $color-white;
     outline: none;
     transition: border-color $effect;
+
+    &::placeholder {
+      color: $color-charcoal-gray;
+      opacity: 1;
+      transition: opacity $effect;
+      @include user-select;
+    }
+
+    &:focus {
+      border-color: $color-blue;
+      &::placeholder {opacity: 0;}
+    }
+
+    &[disabled] {
+      border-color:$color-mist;
+      background: $color-neutral;
+    }
   }
 }

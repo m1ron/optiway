@@ -44,9 +44,6 @@
     font-size: 16px;
     line-height: 1.5;
   }
-  @include media-breakpoint-up(lg) {
-    //width: 33.3%;
-  }
 
   &::before {
     @include pseudo;
@@ -68,6 +65,10 @@
   &:nth-child(1)::before {content: '1';}
   &:nth-child(2)::before {content: '2';}
   &:nth-child(3)::before {content: '3';}
+
+  h3, .h3, h4, .h4 {
+    margin-bottom: 8px;
+  }
 
   &__image {
     border-radius: 0 0 24px 24px;

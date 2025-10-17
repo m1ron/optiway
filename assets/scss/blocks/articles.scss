@@ -9,7 +9,7 @@
     padding: 120px 0;
   }
   @include media-breakpoint-up(xl) {
-    padding: 90px 0;
+    padding: 80px 0;
   }
 
   .head {
@@ -18,25 +18,56 @@
     }
   }
 
-  &__list {
+  &__slider {
+    padding-left: 16px;
+    margin: 0 -16px;
+    position: relative;
     overflow: hidden;
+    @include media-breakpoint-up(sm) {
+      width: calc(520px + 16px + (100vw - 520px) / 2);
+    }
+    @include media-breakpoint-up(md) {
+      width: calc(704px + 16px + (100vw - 704px) / 2);
+    }
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+    }
+  }
+
+  &__list {
+    position: relative;
     display: flex;
     gap: 20px;
+    transition: transform .4s $bezier;
   }
+
+  &__slider[data-active="0"] &__list {transform: translateX(0);}
+  &__slider[data-active="1"] &__list {transform: translateX(-346px);}
+  &__slider[data-active="2"] &__list {transform: translateX(-692px);}
 
   &__more {
     width: 100%;
-    margin-top: 40px;
+    max-width: 342px;
+    margin: 40px auto 0;
+    display: flex;
     @include media-breakpoint-up(md) {
       width: auto;
+      max-width: none;
       margin: 0;
       position: absolute;
       top: 123px;
       right: 0;
     }
     @include media-breakpoint-up(xl) {
-      top: 93px;
+      top: 84px;
     }
+  }
+
+  .article {
+    @include user-select;
   }
 }
 

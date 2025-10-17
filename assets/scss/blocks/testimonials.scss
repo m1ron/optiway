@@ -8,8 +8,17 @@
   @include media-breakpoint-up(md) {
     padding: 100px 0;
   }
-  @include media-breakpoint-up(xl) {
-    padding: 90px 0;
+
+  .head {
+    @include media-breakpoint-up(md) {
+      max-width: 540px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+    @include media-breakpoint-up(md) {
+      max-width: none;
+    }
   }
 
   &__list {
@@ -39,7 +48,7 @@
   }
 
   .stars {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   blockquote {
