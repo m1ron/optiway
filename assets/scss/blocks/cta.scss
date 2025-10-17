@@ -86,18 +86,6 @@
     .cta__heading {
       &, em {color: inherit;}
     }
-
-    .btn {
-      color: $color-blue;
-      background-color: $color-white;
-
-      @media (hover: hover) {
-        &:hover, &:focus {
-          color: $color-blue;
-          background-color: $color-white;
-        }
-      }
-    }
   }
 
   // ADVANCED

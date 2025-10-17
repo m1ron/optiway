@@ -56,4 +56,18 @@
       }
     }
   }
+
+  &--white {
+    color: $color-blue;
+    background-color: $color-white;
+
+    @media (hover: hover) {
+      &:not([disabled]) {
+        &:hover, &:focus {
+          color: $color-blue;
+          background-color: $color-white;
+        }
+      }
+    }
+  }
 }
