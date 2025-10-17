@@ -1,0 +1,74 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+/* ===== HELP ===== */
+.help {
+  margin-top: 40px;
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+  }
+
+  &__category {
+    padding: 24px;
+    box-shadow: inset 0 0 0 1px $color-mist;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    @include media-breakpoint-up(lg) {
+      flex-basis: calc((100% - 40px) / 3);
+    }
+
+    @include media-breakpoint-down(lg) {
+      + .help__category {margin-top: 20px;}
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 3px;
+      margin-top: -2px;
+      @include media-breakpoint-up(md) {
+        width: 40px;
+        height: 40px;
+        margin-top: -4px;
+      }
+      @include media-breakpoint-up(lg) {
+        display: block;
+        margin: 0 0 16px;
+      }
+    }
+
+    .h4 {
+      margin-bottom: 16px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 4px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      @include media-breakpoint-down(md) {
+        margin-right: -15px;
+      }
+
+      li {
+        + li {margin-top: 16px;}
+
+        a {
+          color: $color-charcoal-blue;
+        }
+      }
+    }
+  }
+
+}

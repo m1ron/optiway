@@ -46,12 +46,10 @@
 
 
     @media (hover: hover) {
-      &:hover, &:focus {
-        &:not([disabled]) {
-          &:hover, &:focus {
-            box-shadow: 0 0 0 1px inset $color-charcoal-gray;
-            background-color: $color-white;
-          }
+      &:not([disabled]) {
+        &:hover, &:focus {
+          box-shadow: 0 0 0 1px inset $color-charcoal-gray;
+          background-color: $color-white;
         }
       }
     }

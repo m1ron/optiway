@@ -28,20 +28,39 @@
   }
 
   li {
-    border-radius: 40px;
-    box-shadow: inset 0 0 0 1px $color-mist;
-
-    &.active {background-color: $color-mist;}
 
     a {
       padding: 8px 10px;
+      border-radius: 40px;
+      box-shadow: inset 0 0 0 1px $color-mist;
       display: block;
       color: $color-darker;
       text-align: center;
       text-decoration: none;
       white-space: nowrap;
+      transition: color $effect, box-shadow $effect, background-color $effect;
       @include media-breakpoint-up(md) {
         min-width: 60px;
+      }
+    }
+
+    &:not(.active) {
+      a {
+        @media (hover: hover) {
+          &:not([disabled]) {
+            &:hover, &:focus {
+              box-shadow: 0 0 0 1px inset $color-charcoal-gray;
+              background-color: $color-white;
+            }
+          }
+        }
+      }
+    }
+
+    &.active {
+      a {
+        background-color: $color-mist;
+        cursor: default;
       }
     }
   }
