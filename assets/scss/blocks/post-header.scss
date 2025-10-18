@@ -46,6 +46,7 @@
   }
 
   h2, .h2 {
+    margin-bottom: 20px;
     @include media-breakpoint-up(lg) {
       margin-bottom: 12px;
     }
@@ -77,6 +78,7 @@
       margin: 0 auto;
       display: block;
       @include user-select;
+      @include user-drag;
       @include media-breakpoint-down(xss) {
         width: 100%;
         height: auto;

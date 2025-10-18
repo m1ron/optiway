@@ -3,12 +3,44 @@
 
 /* ===== HELP ===== */
 .help {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 40px 0 80px;
   @include media-breakpoint-up(lg) {
     display: flex;
     flex-wrap: wrap;
     gap: 20px
+  }
+
+  &__header {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include media-breakpoint-up(xl) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      display: block;
+      @include media-breakpoint-up(md) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    h2, h3, h4, .h2, .h3, .h4 {
+      margin: 0;
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @include media-breakpoint-up(md) {
+        letter-spacing: 0;
+      }
+    }
   }
 
   &__category {
@@ -20,56 +52,28 @@
     @include media-breakpoint-up(lg) {
       flex-basis: calc((100% - 40px) / 3);
     }
-
     @include media-breakpoint-down(lg) {
       + .help__category {margin-top: 20px;}
-    }
-
-    &__icon {
-      width: 32px;
-      height: 32px;
-      display: inline-block;
-      vertical-align: top;
-      margin-right: 3px;
-      margin-top: -2px;
-      @include media-breakpoint-up(md) {
-        width: 40px;
-        height: 40px;
-        margin-top: -4px;
-      }
-      @include media-breakpoint-up(lg) {
-        display: block;
-        margin: 0 0 16px;
-      }
-    }
-
-    .h4 {
-      margin-bottom: 16px;
-      @include media-breakpoint-down(lg) {
-        margin-top: 4px;
-      }
-      @include media-breakpoint-down(md) {
-        font-size: 18px;
-        line-height: 28px;
-      }
     }
 
     ul {
       padding: 0;
       margin: 0;
       list-style: none;
-      @include media-breakpoint-down(md) {
-        margin-right: -15px;
+      @include media-breakpoint-down(sm) {
+        margin-right: -16px;
       }
 
       li {
-        + li {margin-top: 16px;}
+        & + li {
+          margin-top: 16px;
+        }
 
         a {
           color: $color-charcoal-blue;
+          outline: none;
         }
       }
     }
   }
-
 }

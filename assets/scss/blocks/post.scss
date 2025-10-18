@@ -13,6 +13,7 @@
   @include media-breakpoint-up(lg) {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 60px;
   }
   @include media-breakpoint-up(xl) {
@@ -25,11 +26,21 @@
       flex: 0 0 340px;
       order: 2;
     }
+
+    @include media-breakpoint-down(md) {
+      .meta-item.meta-item--social {
+        display: none;
+      }
+      .meta-item.meta-item--links {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__content {
     color: $color-gray;
     @include media-breakpoint-up(lg) {
+      flex: 0 0 560px;
       order: 1;
     }
     @include media-breakpoint-up(xl) {
@@ -38,6 +49,54 @@
 
     section + section {
       margin-top: 60px;
+    }
+  }
+
+  &__full {
+    width: 100%;
+    order: 5;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 44px;
+      gap: 118px;
+    }
+
+    .post__image {
+      @include media-breakpoint-up(lg) {
+        margin: 0 0 0 -16px;
+        flex: 0 0 420px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin: 0 0 0 -60px;
+        flex: 0 0 532px;
+
+        img {
+          object-position: top left;
+        }
+      }
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    margin: 0 0 40px;
+    display: block;
+
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+      display: block;
+      object-fit: cover;
+      @include user-select;
+      @include user-drag;
     }
   }
 }

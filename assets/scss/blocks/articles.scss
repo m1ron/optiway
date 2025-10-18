@@ -32,7 +32,7 @@
   }
 
   &__slider {
-    padding-left: 16px;
+    padding: 0 16px;
     margin: 0 -16px;
     position: relative;
     overflow: hidden;
@@ -47,6 +47,10 @@
       padding: 0;
       margin: 0;
       overflow: visible;
+    }
+
+    .article {
+      @include user-select;
     }
   }
 
@@ -85,10 +89,6 @@
     @include media-breakpoint-up(xl) {
       top: 84px;
     }
-  }
-
-  .article {
-    @include user-select;
   }
 }
 
