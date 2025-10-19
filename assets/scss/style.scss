@@ -15,9 +15,10 @@
 @use 'components/tags';
 @use 'components/meta';
 @use 'components/social';
+@use 'components/helpful';
+@use 'components/questions';
 
 @use 'blocks/page-header';
-
 @use 'blocks/hero';
 @use 'blocks/stats';
 @use 'blocks/feature';
@@ -27,12 +28,10 @@
 @use 'blocks/testimonials';
 @use 'blocks/articles';
 @use 'blocks/cta';
-
 @use 'blocks/featured-article';
-
 @use 'blocks/post-header';
 @use 'blocks/post';
-
 @use 'blocks/form-search';
 @use 'blocks/help';
 @use 'blocks/help-stats';
+@use 'blocks/contact-us';

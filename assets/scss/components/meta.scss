@@ -6,9 +6,9 @@
   position: relative;
   @include media-breakpoint-up(md) {
     padding-top: 20px;
-    padding-bottom: 20px;
   }
   @include media-breakpoint-up(lg) {
+    padding-bottom: 20px;
     position: sticky;
     top: 82px;
     background: white;

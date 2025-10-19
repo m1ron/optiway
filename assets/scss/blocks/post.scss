@@ -3,18 +3,21 @@
 
 /* ===== POST ===== */
 .post {
-  padding: 60px 0;
+  padding: 60px 0 80px;
   display: flex;
   flex-direction: column;
   gap: 40px;
   @include media-breakpoint-up(md) {
     padding: 40px 0;
+    gap: 60px;
+    @include media-breakpoint-down(xl) {
+      & ~ .articles {padding-top: 36px;}
+    }
   }
   @include media-breakpoint-up(lg) {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 60px;
   }
   @include media-breakpoint-up(xl) {
     padding-top: 80px;
@@ -50,18 +53,38 @@
     section + section {
       margin-top: 60px;
     }
+
+    picture {
+      max-width: 100%;
+
+      img {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+        @include user-select;
+        @include user-drag;
+      }
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+      > *:last-child {margin-bottom: 0;}
+    }
   }
 
   &__full {
     width: 100%;
     order: 5;
+    @include media-breakpoint-up(md) {
+      margin-top: 20px;
+    }
     @include media-breakpoint-up(lg) {
       display: flex;
       align-items: center;
       gap: 60px;
     }
     @include media-breakpoint-up(xl) {
-      margin-top: 44px;
+      margin-top: 60px;
       gap: 118px;
     }
 
@@ -97,6 +120,37 @@
       object-fit: cover;
       @include user-select;
       @include user-drag;
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    order: 10;
+    @include media-breakpoint-up(md) {
+      padding-top: 40px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 16px;
+    }
+
+    hr {
+      margin-top: 40px;
+      margin-bottom: 39px;
+      @include media-breakpoint-up(md) {
+        margin-top: 32px;
+        margin-bottom: 31px;
+
+        & + .meta-item--social {
+          strong {
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+
+    .meta-item--social {
+      margin-bottom: 0;
     }
   }
 }

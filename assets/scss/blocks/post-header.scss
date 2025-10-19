@@ -28,9 +28,10 @@
     font-size: 16px;
     line-height: 1.5;
     display: none;
+    gap: 24px;
     cursor: default;
     @include media-breakpoint-up(md) {
-      display: block;
+      display: flex;
     }
 
     em {
@@ -89,6 +90,19 @@
       }
       @include media-breakpoint-up(md) {
         border-radius: 24px;
+      }
+    }
+  }
+
+  &.help-header {
+    @include media-breakpoint-down(xl) {
+      padding-top: 80px;
+      padding-bottom: 20px;
+      text-align: center;
+
+      .post-header__data {
+        display: flex;
+        justify-content: center;
       }
     }
   }

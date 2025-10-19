@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Blog - Optiway Route Planner</title>
+    <title>Help Center - Optiway Route Planner</title>
     <meta name="description" content="A route planner with a nice interface that helps you build a route up to 200 driving directions  and simplifies delivery">
     <meta name="keywords" content="multiple route planner app, how to add multiple address in google maps, free route planner app for delivery drivers, fastest driving route, aa autoroute, fastest route, make a route, plan my route, plot a route, driving direction by car, routeplanners, circuit app, driving directions shortest route, delivery route planner, create itinerary map, driving directions mapquest, best route planner, route planning, apple maps route planner, route optimization, free route planner, google maps truck route, map a route, route planner, route mapper, plan a route on google maps, directions by car, route planner app, app to optimize route, mapquest get driving directions, best routing app, driving directions and maps, get driving directions, multiple stops google maps, mapquest directions, aa route planner, route maker app, route maps, best driving routes, direction app, map my route, best gps app, map routing app, route finder, google route planner, google navigation app, best driving routes">
     <link rel="canonical" href="https://optiway-app.com/">
@@ -55,8 +55,8 @@
             <p>Find answers to common questions or get in touch with our team</p>
         </header>
 
-        <form action="#" class="form-search">
-            <input class="form-control" type="search" maxlength="50" value="" placeholder="Search">
+        <form action="help.html" class="form-search" type="put">
+            <input class="form-control" name="s" type="search" value="" placeholder="Search" maxlength="30">
         </form>
 
         <div class="help">
@@ -117,6 +117,31 @@
                 </section>
             </div>
         </section>
+
+        <div class="contact-us">
+            <div class="contact-us__col">
+                <header class="head">
+                    <h2>Didn’t find your answer?</h2>
+                    <p>Write to our team — we respond within 24 hours.</p>
+                </header>
+            </div>
+            <div class="contact-us__col">
+                <form action="help.html" class="form" type="get">
+                    <div class="form-group form-half">
+                        <input class="form-control" name="email" type="email" maxlength="30" required placeholder="Email address *" value="">
+                    </div>
+                    <div class="form-group form-half">
+                        <input class="form-control" name="subject" type="text" maxlength="50" required placeholder="Subject *" value="">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" id="" cols="30" rows="8" maxlength="300" required placeholder="Your message *"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <div class="cta cta--advanced">
             <section class="cta__content cta--blue">

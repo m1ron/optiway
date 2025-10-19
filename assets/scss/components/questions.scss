@@ -1,0 +1,21 @@
+@use '../base/var' as *;
+@use '../base/breakpoints' as *;
+
+/* ===== QUESTIONS ===== */
+.questions {
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+  position: relative;
+  color: $color-charcoal-gray;
+  background: $color-neutral;
+
+  h5 {
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin: 0 0 -6px;
+    line-height: 36px;
+  }
+}

@@ -40,7 +40,7 @@ body {
 }
 
 a {
-  color: $color-dark;
+  color: $color-blue;
   text-decoration: underline;
   text-decoration-thickness: .0625em;
   text-decoration-color: inherit;
@@ -48,7 +48,7 @@ a {
   transition: text-decoration-color $effect-s, color $effect;
   @media (hover: hover) {
     &:hover, &:focus {
-      text-decoration-color: rgba($color-dark, 0);
+      text-decoration-color: rgba($color-blue, 0);
     }
   }
 }
@@ -133,4 +133,10 @@ h5, .h5 {
 
 .hidden {
   display: none;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: $color-mist;
 }
