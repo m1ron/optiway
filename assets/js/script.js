@@ -3,25 +3,31 @@ const initNav = () => {
   const nav = header.querySelector('.header__nav');
   const toggle = header.querySelector('.header__toggle');
   const overlay = header.querySelector('.header__overlay');
-  const close = header.querySelector('.header__close');
 
-  const onOpen = () => {
+  const menuToggle = () => {
+    if (nav.classList.contains('open')) {
+      menuClose();
+    } else {
+      menuOpen();
+    }
+  };
+
+  const menuOpen = () => {
     nav.classList.add('visible');
     setTimeout(() => {
       nav.classList.add('open');
     }, 50)
   };
 
-  const onClose = () => {
+  const menuClose = () => {
     nav.classList.remove('open');
     setTimeout(() => {
       nav.classList.remove('visible');
     }, 400)
   };
 
-  toggle.addEventListener('click', onOpen);
-  overlay.addEventListener('click', onClose);
-  close.addEventListener('click', onClose);
+  toggle.addEventListener('click', menuToggle);
+  overlay.addEventListener('click', menuClose);
 };
 
 const initForms = () => {
@@ -72,6 +78,6 @@ const initForms = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  //initNav();
+  initNav();
   initForms();
 });

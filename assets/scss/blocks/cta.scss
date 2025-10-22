@@ -29,28 +29,40 @@
       margin-top: 24px;
       font-size: 18px;
       line-height: 28px;
+      @include media-breakpoint-up(lg) {
+        @include media-breakpoint-down(xl) {
+          margin-top: 16px;
+        }
+      }
     }
 
     .form {
       margin-top: 24px;
       display: block;
       @include media-breakpoint-up(md) {
+        width: 100%;
         max-width: 338px;
         display: flex;
         align-items: flex-start;
         flex-wrap: nowrap;
         gap: 8px;
       }
+      @include media-breakpoint-up(lg) {
+        @include media-breakpoint-down(xl) {
+          margin-top: 16px;
+        }
+      }
       @include media-breakpoint-up(xl) {
         max-width: none;
       }
 
       &-error-message {
-        margin: 4px 0 0;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
+        @include media-breakpoint-up(md) {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+        }
       }
 
       .btn {
@@ -129,17 +141,18 @@
           text-align: left;
         }
         @include media-breakpoint-up(lg) {
-          padding: 44px 30px;
+          padding: 28px;
           flex: 1;
           @include media-breakpoint-down(xl) {
-            padding-top: 24px;
-            padding-bottom: 24px;
+            min-height: 312px;
+            font-size: 17px;
+            line-height: 24px;
           }
         }
         @include media-breakpoint-up(xl) {
+          padding-top: 44px;
+          padding-bottom: 44px;
           &.cta--gray {
-            padding-right: 28px;
-            padding-left: 28px;
             flex: 0 0 426px;
           }
         }
@@ -147,7 +160,7 @@
         .form-group {
           @include media-breakpoint-down(lg) {
             @include media-breakpoint-up(md) {
-              width: 51.4%;
+              //width: 51.4%;
             }
           }
         }
@@ -178,6 +191,10 @@
         @include media-breakpoint-up(lg) {
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
+        }
+        @include media-breakpoint-up(l) {
+          padding-right: 30px;
+          padding-left: 30px;
         }
         @include media-breakpoint-down(lg) {
           @include media-breakpoint-up(md) {
