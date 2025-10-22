@@ -25,81 +25,53 @@ const initNav = () => {
 };
 
 const initForms = () => {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Selectboxes
-  if (typeof NiceSelect !== 'undefined') {
-    document.querySelectorAll('.form-select').forEach(el => {
-      NiceSelect.bind(el);
-    });
-  }
+  function validate(e, form) {
+    form.querySelectorAll('.form-error-message').forEach(msg => msg.textContent = '');
+    form.querySelectorAll('.form-error').forEach(el => el.classList.remove('form-error'));
 
-  // Password visibility
-  const toggles = document.querySelectorAll('.form-password-toggle');
-  if (toggles) {
-    toggles.forEach(elem => {
-      elem.addEventListener('click', event => {
-        let parent = elem.parentNode;
-        let parentNodes = parent.children;
-        let parentNodesArray = Array.from(parentNodes);
-        let siblings = parentNodesArray.filter(function (sibling) {
-          return sibling.classList.contains('form-control');
-        });
-        if (siblings.length > 0) {
-          const password = siblings[0];
-          const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-          if (type === 'text') {
-            elem.classList.add('active');
-          } else {
-            elem.classList.remove('active');
-          }
-          password.setAttribute('type', type);
+    function showError(input, msg) {
+      let group = input.parentNode;
+      input.classList.add('form-error');
+
+      let errorEl = group.querySelector('.form-error-message');
+      if (!errorEl) {
+        errorEl = document.createElement('p');
+        errorEl.className = 'form-error-message';
+        group.appendChild(errorEl);
+      }
+      if (msg) errorEl.textContent = msg;
+    }
+
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    inputs.forEach((input) => {
+      if (input.getAttribute('type') === 'email') {
+        if (!emailPattern.test(input.value.trim())) {
+          showError(input, 'Invalid email address');
+          isValid = false;
         }
-        event.preventDefault();
-      }, false);
-    });
-  }
-}
-
-const initFAQ = () => {
-  const faq = document.querySelector('.faq');
-  if (faq) {
-    const list = faq.querySelectorAll('.faq__entry');
-    list.forEach(e => {
-      const entry = e;
-      const question = entry.querySelector('.faq__question');
-      const reply = entry.querySelector('.faq__reply');
-      const space = entry.querySelector('.faq__space');
-
-      const onClick = e => {
-        if (entry.classList.contains('open')) {
-          e.preventDefault();
-          reply.removeAttribute('style');
-          entry.classList.remove('open');
-          setTimeout(() => {
-            entry.classList.remove('visible');
-          }, 400);
-        } else {
-          entry.classList.add('visible');
-          setTimeout(() => {
-            entry.classList.add('open');
-            reply.setAttribute('style', 'max-height:' + reply.getAttribute('data-max') + 'px');
-          }, 50);
-          return false;
+      } else {
+        if (input.value.trim().length < 1) {
+          showError(input, 'Field is required');
+          isValid = false;
         }
-      };
-      question.addEventListener('click', onClick);
-
-      const onResize = () => {
-        reply.setAttribute('data-max', space.offsetHeight);
-      };
-      window.addEventListener('resize', onResize);
-      onResize();
+      }
     });
   }
+
+  let isValid = true;
+
+  document.querySelectorAll('.form-validate').forEach(form => {
+    form.addEventListener('submit', e => {
+      isValid = true;
+      validate(e, form);
+      if (!isValid) e.preventDefault();
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   //initNav();
-  //initForms();
-  //initFAQ();
+  initForms();
 });

@@ -10,11 +10,26 @@
 
   &-group {
     width: 100%;
+    position: relative;
     &::after {@include clearfix;}
   }
 
   &-half {
     flex-basis: calc(50% - 8px)
+  }
+
+  &-error-message {
+    padding-left: 20px;
+    margin: 4px 0 0;
+    display: block;
+    position: relative;
+    font: 12px/1.5 $font-secondary;
+    letter-spacing: -.01em;
+    color: $color-red;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23e53e3e' stroke-linecap='round' stroke-linejoin='round' d='M8 5.167v3.5M14.054 5.72v4.56c0 .747-.4 1.44-1.047 1.82l-3.96 2.287a2.11 2.11 0 0 1-2.1 0L2.987 12.1a2.1 2.1 0 0 1-1.047-1.82V5.72c0-.747.4-1.44 1.047-1.82l3.96-2.287a2.11 2.11 0 0 1 2.1 0l3.96 2.287a2.11 2.11 0 0 1 1.047 1.82M8 10.8v.067'/%3E%3C/svg%3E") no-repeat 1px 0;
+    cursor: default;
+    @include user-select;
+    @include user-drag;
   }
 
   &-control {
@@ -47,9 +62,14 @@
       border-color: $color-mist;
       background: $color-neutral;
     }
+
+    &.form-error {
+      border-color: $color-red;
+    }
   }
 
   textarea {
+    padding-top: 8px;
     resize: none;
   }
 }

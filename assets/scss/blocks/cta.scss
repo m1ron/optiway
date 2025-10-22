@@ -37,6 +37,7 @@
       @include media-breakpoint-up(md) {
         max-width: 338px;
         display: flex;
+        align-items: flex-start;
         flex-wrap: nowrap;
         gap: 8px;
       }
@@ -44,14 +45,12 @@
         max-width: none;
       }
 
-      &-control {
-        padding: 11px;
-        font-size: 15px;
-        line-height: 16px;
-        letter-spacing: .01em;
-        @include media-breakpoint-up(md) {
-          font-size: 14px;
-        }
+      &-error-message {
+        margin: 4px 0 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
       }
 
       .btn {
@@ -78,7 +77,7 @@
 
   // GRAY
   &--gray {
-    color: $color-charcoal-gray;
+    color: $color-gray;
     background-color: $color-neutral;
   }
 
