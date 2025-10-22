@@ -19,11 +19,10 @@
 
   &-control {
     width: 100%;
-    padding: 11px;
+    padding: 8.5px 11px 8px;
     border: 1px solid $color-charcoal-light;
     border-radius: 8px;
-    font-size: 15px;
-    line-height: 16px;
+    font: 15px/21.5px $font-secondary;
     color: $color-dark;
     background: $color-white;
     outline: none;

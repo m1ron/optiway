@@ -9,7 +9,7 @@
 @use 'layout/footer';
 
 @use 'components/button';
-@use 'components/forms';
+@use 'components/form';
 @use 'components/stars';
 @use 'components/head';
 @use 'components/tags';
@@ -31,7 +31,7 @@
 @use 'blocks/featured-article';
 @use 'blocks/post-header';
 @use 'blocks/post';
-@use 'blocks/form-search';
+@use 'blocks/search';
 @use 'blocks/help';
 @use 'blocks/help-stats';
 @use 'blocks/contact-us';
