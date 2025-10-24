@@ -6,16 +6,26 @@
   padding: 20px;
   border-radius: 20px;
   margin-top: 40px;
+  line-height: 36px;
   position: relative;
   color: $color-charcoal-gray;
   background: $color-neutral;
-
-  h5 {
-    margin-bottom: 6px;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
   }
 
   p {
-    margin: 0 0 -6px;
-    line-height: 36px;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: -6px;
+    }
+  }
+
+  p.h5 {
+    margin-bottom: 6px;
+  }
+
+  a {
+    outline: none;
   }
 }

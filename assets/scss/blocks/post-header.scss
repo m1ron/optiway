@@ -55,9 +55,6 @@
 
   &__content {
     color: $color-charcoal-gray;
-    @include media-breakpoint-up(lg) {
-      color: $color-dark-gray;
-    }
 
     *:last-child {margin-bottom: 0 !important;}
   }
@@ -98,11 +95,22 @@
     @include media-breakpoint-down(xl) {
       padding-top: 80px;
       padding-bottom: 20px;
+      justify-content: center;
       text-align: center;
 
       .post-header__data {
+        margin-top: 20px;
+        margin-bottom: 0;
         display: flex;
         justify-content: center;
+        order: 10;
+      }
+
+      .post-header__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }

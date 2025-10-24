@@ -55,21 +55,25 @@
         <header class="post-header help-header">
             <div class="post-header__content">
                 <a href="help.html" class="btn btn--large btn--outline post-header__back">Go back</a>
-                <h2>How to start free trial or paid subscription</h2>
                 <p class="post-header__data">
                     <em><svg width="20" height="20"><use href="assets/img/sprite.svg#time"></use></svg><span>3 min read</span></em>
                     <em><svg width="21" height="20"><use href="assets/img/sprite.svg#date"></use></svg><span>Updated Sep, 2025</span></em>
                 </p>
+                <h2>How to start free trial or paid subscription</h2>
             </div>
         </header>
 
         <div class="post">
             <aside class="post__meta">
                 <div class="meta">
+                    <p class="meta-item">
+                        <strong>Updated</strong>
+                        <time datetime="2025-09-20">20 September 2025</time>
+                    </p>
                     <div class="meta-item meta-item--links">
                         <strong>In this article</strong>
                         <ul class="meta-links">
-                            <li><a href="#determining-cost">Paragraph 1</a></li>
+                            <li class="active"><a href="#determining-cost">Paragraph 1</a></li>
                             <li><a href="#example-cost">Paragraph 2</a></li>
                             <li><a href="#costs-reduction">Paragraph 3</a></li>
                         </ul>
@@ -79,7 +83,7 @@
 
             <div class="post__content">
                 <section id="determining-cost">
-                    <h3 class="h4">Determining the Cost Per Mile for a Truck in USA</h3>
+                    <h3>Determining the Cost Per Mile for a Truck in USA</h3>
                     <p>Determining the cost per mile for operating a truck is a crucial factor for transport companies and independent carriers when pricing services and managing expenses. This cost consists of multiple components, each contributing to the total operating expenses. </p>
                     <p class="lead">Key Cost Components Per Mile:</p>
                     <p>1. Fuel Costs: Expenses depend on fuel prices and vehicle fuel efficiency. The average fuel consumption for trucks is around 6 miles per gallon (approximately 39 liters per 100 km), though this can vary based on model and driving conditions.</p>
@@ -91,7 +95,7 @@
                 </section>
 
                 <section id="example-cost">
-                    <h3 class="h4">Example Cost Per Mile Calculation</h3>
+                    <h3>Example Cost Per Mile Calculation</h3>
                     <p>Assume a truck’s total annual operating expenses are $150,000, and its yearly mileage is 100,000 miles. </p>
                     <p class="lead">The cost per mile would be:</p>
                     <p class="lead">$150,000 / 100,000 miles = $1.50 per mile</p>
@@ -99,7 +103,7 @@
                 </section>
 
                 <section id="costs-reduction">
-                    <h3 class="h4">How Route Optimization Reduces Costs</h3>
+                    <h3>How Route Optimization Reduces Costs</h3>
                     <p>Using route optimization software helps companies reduce mileage and related costs significantly. According to Schedex, route optimization can cut daily mileage by up to 30%.</p>
                     <p>For a fleet of 100 trucks, each driving 200 miles per day, this means a reduction to 170 miles per vehicle, leading to fuel savings and lower maintenance costs.</p>
                     <p>Since the average truck fuel efficiency is 6 MPG, cutting 30 miles per day results in saving 5 gallons of fuel per truck daily. </p>
@@ -120,56 +124,31 @@
             </footer>
         </div>
 
-        <section class="articles">
-            <header class="head head--smaller">
-                <h3>Related Articles</h3>
+        <section class="articles articles--compact">
+            <header class="head">
+                <h4>Related Articles</h4>
             </header>
-            <div class="articles__slider">
-                <div class="articles__list">
-                    <section class="article">
-                        <a href="help-article.html" class="article__link">
-                            <picture class="article__image"><img src="assets/img/blog/preview.png" srcset="assets/img/blog/preview.png 1x, assets/img/blog/preview@2x.png 2x, assets/img/blog/preview@3x.png 3x" width="374" height="180" alt="Optiway Route Planning" title="Optiway Route Planning" loading="eager"></picture>
-                            <time class="article__time">3 min read</time>
-                            <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
-                            <p>Description</p>
-                        </a>
-                    </section>
-                    <section class="article">
-                        <a href="help-article.html" class="article__link">
-                            <picture class="article__image"><img src="assets/img/blog/preview.png" srcset="assets/img/blog/preview.png 1x, assets/img/blog/preview@2x.png 2x, assets/img/blog/preview@3x.png 3x" width="374" height="180" alt="Optiway Route Planning" title="Optiway Route Planning" loading="eager"></picture>
-                            <time class="article__time">3 min read</time>
-                            <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
-                            <p>Description</p>
-                        </a>
-                    </section>
-                    <section class="article">
-                        <a href="help-article.html" class="article__link">
-                            <picture class="article__image"><img src="assets/img/blog/preview.png" srcset="assets/img/blog/preview.png 1x, assets/img/blog/preview@2x.png 2x, assets/img/blog/preview@3x.png 3x" width="374" height="180" alt="Optiway Route Planning" title="Optiway Route Planning" loading="eager"></picture>
-                            <time class="article__time">3 min read</time>
-                            <h3 class="h5 article__title">Optiway&trade; Route Planning &amp; Navigation Services</h3>
-                            <p>Description</p>
-                        </a>
-                    </section>
-                </div>
+            <div class="articles__list">
+                <section class="article">
+                    <a href="help-article.html" class="article__link">
+                        <h3 class="h5 article__title">How to cancel subscription or request refund</h3>
+                        <svg class="article__arrow" width="24" height="24"><use href="assets/img/sprite.svg#arrow-right"></use></svg>
+                    </a>
+                </section>
+                <section class="article">
+                    <a href="help-article.html" class="article__link">
+                        <h3 class="h5 article__title">How to cancel subscription or request refund</h3>
+                        <svg class="article__arrow" width="24" height="24"><use href="assets/img/sprite.svg#arrow-right"></use></svg>
+                    </a>
+                </section>
+                <section class="article">
+                    <a href="help-article.html" class="article__link">
+                        <h3 class="h5 article__title">How to cancel subscription or request refund</h3>
+                        <svg class="article__arrow" width="24" height="24"><use href="assets/img/sprite.svg#arrow-right"></use></svg>
+                    </a>
+                </section>
             </div>
         </section>
-
-        <div class="cta cta--advanced">
-            <section class="cta__content cta--blue">
-                <h2 class="cta__heading">Plan your first optimized route today</h2>
-                <p>Get the app now and optimize your first delivery route in minutes.</p>
-                <a href="https://apps.apple.com/app/apple-store/id1641843155?pt=124257092&ct=website-2&mt=8" class="btn btn--white" target="_blank" rel="noopener noreferrer" title="Download on iOS"><svg width="20" height="20"><use href="assets/img/sprite.svg#apple-blue"></use></svg> Download on iOS</a>
-            </section>
-            <figure class="cta__map"><img src="assets/img/cta/map.webp" srcset="assets/img/cta/map.webp, assets/img/cta/map@2x.webp 2x, assets/img/cta/map@3x.webp 3x" width="307" height="341" alt="Map" title="Map" loading="lazy"></figure>
-            <section class="cta__content cta--gray">
-                <h2 class="cta__heading">Android user? Be the first to get Optiway</h2>
-                <p>Android version is coming soon &mdash; join the waitlist to be the first to know.</p>
-                <form action="#" class="form form-subscribe form-validate" novalidate>
-                    <div class="form-group"><input class="form-control" type="email" maxlength="50" required value="" placeholder="Enter email address"></div>
-                    <button type="submit" class="btn">Send</button>
-                </form>
-            </section>
-        </div>
     </article>
 </main>
 

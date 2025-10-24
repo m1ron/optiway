@@ -11,7 +11,9 @@
     padding: 40px 0;
     gap: 60px;
     @include media-breakpoint-down(xl) {
-      & ~ .articles {padding-top: 36px;}
+      & ~ .articles:not(.articles--compact) {
+        padding-top: 36px;
+      }
     }
   }
   @include media-breakpoint-up(lg) {
@@ -126,6 +128,7 @@
   &__footer {
     width: 100%;
     order: 10;
+    position: relative;
     @include media-breakpoint-up(md) {
       padding-top: 40px;
     }
@@ -151,6 +154,55 @@
 
     .meta-item--social {
       margin-bottom: 0;
+    }
+  }
+
+  .help-header ~ & .post__footer {
+    @include media-breakpoint-up(md) {
+      padding-top: 0;
+
+      &::before {
+        @include pseudo;
+        height: 1px;
+        position: absolute;
+        top: -45px;
+        right: 0;
+        left: 0;
+        background: $color-mist;
+      }
+
+      .helpful {
+        margin-top: 16px;
+        @include media-breakpoint-down(lg) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 32px;
+      display: flex;
+
+      &::before {
+        width: 560px;
+        right: auto;
+        top: 0;
+      }
+
+      .helpful {
+        margin-top: 28px;
+      }
+
+      .questions {
+        min-width: 340px;
+        margin-top: -80px;
+        margin-left: auto;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      &::before {
+        width: 720px;
+      }
     }
   }
 }
