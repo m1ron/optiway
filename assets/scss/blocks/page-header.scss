@@ -4,6 +4,7 @@
 /* ===== PAGE-HEADER ===== */
 .page-header {
   padding: 60px 0 40px;
+  color: $color-charcoal-gray;
   @include media-breakpoint-up(md) {
     padding-top: 80px;
   }
@@ -11,9 +12,17 @@
     padding-top: 120px;
   }
 
-  h1 {
+  h1, .h1 {
     margin-bottom: 20px;
     text-align: left;
+  }
+
+  h2, .h2 {
+    margin-bottom: 12px;
+  }
+
+  *:last-child {
+    margin-bottom: 0;
   }
 
   &--smaller {
@@ -28,8 +37,23 @@
     }
   }
 
+  &--small {
+    h1, .h1 {
+      margin-bottom: 12px;
+      @include media-breakpoint-down(xl) {
+        font-size: 36px;
+        line-height: 48px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+  }
+
   &--center {
     text-align: center;
+
     h1 {
       text-align: center;
     }
@@ -51,10 +75,6 @@
           letter-spacing: -.005em;
         }
       }
-    }
-
-    *:last-child {
-      margin-bottom: 0;
     }
   }
 }
