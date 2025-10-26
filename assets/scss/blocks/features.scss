@@ -213,4 +213,47 @@
       }
     }
   }
+
+  &.has-animation {
+    .head * {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .head .btn {
+      transform: translateY(25px);
+      transition: color $effect, box-shadow $effect, background-color $effect, opacity .6s .4s ease, transform .6s .4s ease;
+    }
+
+    .features__entry {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .features__col:first-child .features__entry {
+      transition-delay: .7s;
+    }
+    .features__col:last-child .features__entry:last-child {
+      transition-delay: 1.3s;
+    }
+    .features__col:last-child .features__entry:first-child {
+      transition-delay: 1s;
+    }
+    @include media-breakpoint-up(xl) {
+      .features__col:last-child .features__entry:last-child {
+        transition-delay: 1s;
+      }
+      .features__col:last-child .features__entry:first-child {
+        transition-delay: 1.3s;
+      }
+    }
+
+
+    &.animated {
+      .head *, .features__entry {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 }

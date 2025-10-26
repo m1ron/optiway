@@ -24,6 +24,28 @@
       }
     }
   }
+
+  &.has-animation {
+    .head {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform 1s ease, opacity 1s ease;
+    }
+    .step {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform .8s .1s ease, opacity .8s .1s ease;
+      &:nth-child(2) {transition-delay: .4s;}
+      &:nth-child(3) {transition-delay: .7s;}
+    }
+
+    &.animated {
+      .head, .step {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 }
 
 .step {

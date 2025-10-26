@@ -100,6 +100,19 @@
 
       &--outline {
         color: $color-dark-gray;
+        svg {
+          transition: margin-left $effect;
+        }
+
+        @media (hover: hover) {
+          &:not([disabled]) {
+            &:hover, &:focus {
+              svg {
+                margin-left: 6px;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -134,6 +147,26 @@
         @include media-breakpoint-down(xl) {
           height: auto;
         }
+      }
+    }
+  }
+
+  &.has-animation {
+    .hero__content {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s .1s ease, transform 1s .1s ease;
+    }
+    .hero__image {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s .7s ease, transform 1s .7s ease;
+    }
+
+    &.animated {
+      .hero__content, .hero__image {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }

@@ -1,3 +1,20 @@
+const initAnimation = () => {
+  const elements = document.querySelectorAll('.has-animation');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target); // Animate once
+      }
+    });
+  }, {
+    threshold: 0.2 // Trigger when 20% visible
+  });
+
+  elements.forEach(el => observer.observe(el));
+};
+
 const initNav = () => {
   const header = document.querySelector('.header');
   const nav = header.querySelector('.header__nav');
@@ -78,6 +95,7 @@ const initForms = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initAnimation();
   initNav();
   initForms();
 });

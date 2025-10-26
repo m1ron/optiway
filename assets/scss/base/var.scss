@@ -50,6 +50,7 @@ $bezier: cubic-bezier(.250, .460, .450, .940);
 $easing: ease;
 $effect: .3s $easing;
 $effect-s: .15s $easing;
+$effect-l: .6s $easing;
 
 // Mixins
 @mixin pseudo {content: '';display: block;overflow: hidden;}

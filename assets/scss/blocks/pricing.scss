@@ -72,8 +72,25 @@
   &__accent {
     .pricing__entry {
       box-shadow: inset 0 0 0 2px rgba($color-blue, .3);
+      transition: box-shadow $effect;
       @include media-breakpoint-up(xl) {
         box-shadow: inset 0 0 0 2px $color-neutral;
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover, &:focus {
+        .pricing__pre {
+          color: $color-white;
+          background-color: $color-blue;
+
+          svg {
+            filter: brightness(0) invert(1);
+          }
+        }
+        .pricing__entry {
+          box-shadow: inset 0 0 0 2px $color-blue;
+        }
       }
     }
   }
@@ -96,6 +113,7 @@
     background: $color-neutral;
     cursor: default;
     @include user-select;
+    transition: background-color $effect, color $effect;
     @include media-breakpoint-up(md) {
       position: absolute;
       top: 0;
@@ -105,6 +123,7 @@
 
     svg, span {
       display: block;
+      transition: filter .2s ease;
     }
   }
 
@@ -146,5 +165,27 @@
 
   .btn {
     margin-top: auto;
+  }
+
+  &.has-animation {
+    .head {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform 1s ease, opacity 1s ease;
+    }
+    .pricing__list li {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform .8s .4s ease, opacity .8s .4s ease;
+      &:nth-child(2) {transform: translateY(10px);transition-delay: .8s;}
+      &:nth-child(3) {transition-delay: 1.2s;}
+    }
+
+    &.animated {
+      .head, .pricing__list li {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }

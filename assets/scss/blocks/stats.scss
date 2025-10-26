@@ -81,4 +81,18 @@
       line-height: 28px;
     }
   }
+
+  &.has-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+    @include media-breakpoint-up(lg) {
+      transition-delay: 1.4s;
+    }
+
+    &.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

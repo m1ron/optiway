@@ -203,6 +203,30 @@
       margin-bottom: 0;
     }
   }
+
+  &.has-animation {
+    .head {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    .article {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform .8s .4s ease, opacity .8s .4s ease;
+    }
+    .articles__more {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: transform .8s .4s ease, opacity .8s .4s ease;
+    }
+
+    &.animated {
+      .head, .article, .articles__more {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 }
 
 .article {

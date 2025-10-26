@@ -103,6 +103,15 @@
     }
   }
 
+  &.has-animation {
+    opacity: 0;
+    transition: opacity 1s .4s ease;
+
+    &.animated {
+      opacity: 1;
+    }
+  }
+
   // ADVANCED
   &--advanced {
     position: relative;

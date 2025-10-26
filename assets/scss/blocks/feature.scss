@@ -75,4 +75,24 @@
       }
     }
   }
+
+  &.has-animation {
+    .feature__content {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .feature__image {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s .6s ease, transform 1s .6s ease;
+    }
+
+    &.animated {
+      .feature__content, .feature__image {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 }

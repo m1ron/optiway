@@ -49,4 +49,26 @@
     margin-bottom: 24px;
     display: block;
   }
+
+  &.has-animation {
+    .head {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform 1s ease, opacity 1s ease;
+    }
+    .tools__entry {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: transform .8s .4s ease, opacity .8s .4s ease;
+      &:nth-child(2) {transition-delay: .7s;}
+      &:nth-child(3) {transition-delay: 1s;}
+    }
+
+    &.animated {
+      .head, .tools__entry {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 }
