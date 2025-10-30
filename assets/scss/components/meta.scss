@@ -53,7 +53,9 @@
     }
   }
 
-  & > &-item:last-child {margin-bottom: 0;}
+  & > &-item:last-child {
+    margin-bottom: 0;
+  }
 
   &-tags {
     padding: 0 0 8px;

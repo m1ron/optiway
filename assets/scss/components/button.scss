@@ -16,7 +16,7 @@
   color: $color-white;
   text-align: center;
   text-decoration: none;
-  background: $color-blue;
+  background: $color-blue no-repeat center center;
   transition: color $effect, box-shadow $effect, background-color $effect;
   outline: none;
   cursor: pointer;
@@ -43,7 +43,6 @@
     color: $color-charcoal-blue;
     background: $color-white;
     box-shadow: 0 0 0 1px inset $color-charcoal-light;
-
 
     @media (hover: hover) {
       &:not([disabled]) {

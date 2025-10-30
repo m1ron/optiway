@@ -4,16 +4,16 @@ $max-width: 1920px;
 
 // Media Breakpoints
 $grid-breakpoints: (
-  xs: 0,
-  min: 321px, // Min width
-  xss: 370px, // iPhone SE
-  xsm: 390px, // iPhone 14
-  xsl: 420px, // iPhone Plus/Max
-  sm: 572px,
-  md: 768px,
-  lg: 992px,
-  xl: 1280px,
-  xxl: 1440px
+        xs: 0,
+        min: 321px, // Min width
+        xss: 370px, // iPhone SE
+        xsm: 390px, // iPhone 14
+        xsl: 420px, // iPhone Plus/Max
+        sm: 572px,
+        md: 768px,
+        lg: 992px,
+        xl: 1280px,
+        xxl: 1440px
 ) !default;
 
 // Paths
@@ -53,8 +53,32 @@ $effect-s: .15s $easing;
 $effect-l: .6s $easing;
 
 // Mixins
-@mixin pseudo {content: '';display: block;overflow: hidden;}
-@mixin clearfix {content: '';display: table;clear: both;}
-@mixin font-smooth {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
-@mixin user-select {-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
-@mixin user-drag {-webkit-user-drag: none;user-drag: none;}
+@mixin pseudo {
+  content: '';
+  display: block;
+  overflow: hidden;
+}
+
+@mixin clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@mixin font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin user-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin user-drag {
+  -webkit-user-drag: none;
+  user-drag: none;
+}

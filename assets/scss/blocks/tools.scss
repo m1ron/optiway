@@ -42,7 +42,9 @@
       }
     }
 
-    *:last-child {margin-bottom: 0;}
+    *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__icon {
@@ -56,12 +58,19 @@
       transform: translateY(30px);
       transition: transform 1s ease, opacity 1s ease;
     }
+
     .tools__entry {
       opacity: 0;
       transform: translateY(30px);
       transition: transform .8s .4s ease, opacity .8s .4s ease;
-      &:nth-child(2) {transition-delay: .7s;}
-      &:nth-child(3) {transition-delay: 1s;}
+
+      &:nth-child(2) {
+        transition-delay: .7s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 1s;
+      }
     }
 
     &.animated {

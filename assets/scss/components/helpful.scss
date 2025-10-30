@@ -15,21 +15,34 @@
     display: block;
   }
 
+  svg {
+    display: block;
+    position: relative;
+
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+
   a {
     display: block;
+    transition: transform $effect;
     outline: none;
 
-    @media (hover: hover) {
-      &:hover, &:focus {
-        svg {
-          transform: translateY(-3px);
-        }
+    &.active svg {
+      &:nth-child(1) {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: block;
       }
     }
   }
 
-  svg {
-    display: block;
-    transition: transform $effect;
+  &-down {
+    svg {
+      transform: rotate(180deg);
+    }
   }
 }

@@ -90,8 +90,13 @@
         display: flex;
       }
       &.open {
-        .header__overlay {opacity: .8;}
-        .header__menu {transform: translate3d(0, 0, 0);}
+        .header__overlay {
+          opacity: .8;
+        }
+
+        .header__menu {
+          transform: translate3d(0, 0, 0);
+        }
       }
     }
     @include media-breakpoint-up(md) {
@@ -275,9 +280,11 @@
       transition: opacity $effect, transform $effect;
       //transform-origin: left center;
     }
+
     span::before {
       top: 10px;
     }
+
     span::after {
       bottom: 10px;
     }

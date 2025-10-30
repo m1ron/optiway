@@ -31,7 +31,7 @@
 
 <header class="header">
     <div class="container">
-        <figure class="header__logo"><a href="index.html" title="Optiway Route Planner"><img src="assets/img/logo.svg" width="92" height="36" alt="Optiway" title="Optiway" loading="eager"></a></figure>
+        <figure class="header__logo"><a href="./" title="Optiway Route Planner"><img src="assets/img/logo.svg" width="92" height="36" alt="Optiway" title="Optiway" loading="eager"></a></figure>
         <nav class="header__nav">
             <div class="header__space">
                 <menu class="header__menu">
@@ -54,7 +54,7 @@
     <article class="container">
         <header class="post-header">
             <div class="post-header__content">
-                <a href="blog.html" class="btn btn--large btn--outline post-header__back">Go back</a>
+                <a href="#back" class="btn btn--large btn--outline post-header__back" onclick="history.back();return false;">Go back</a>
                 <p class="post-header__data"><em><svg width="20" height="20"><use href="assets/img/sprite.svg#time"></use></svg><span>3 min read</span></em></p>
                 <h2>How does Optiway help save thousands on delivery?</h2>
                 <p>Determining the cost per mile for operating a truck is a crucial factor for transport companies and independent carriers when pricing services and managing expenses.</p>
@@ -103,7 +103,7 @@
                             <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Share on Facebook"><svg width="20" height="20"><use href="assets/img/sprite.svg#facebook"></use></svg></a></li>
                             <li><a href="https://x.com" target="_blank" rel="noopener noreferrer" title="Share on X"><svg width="20" height="20"><use href="assets/img/sprite.svg#x"></use></svg></a></li>
                             <li><a href="#" title="Share in email"><svg width="24" height="24"><use href="assets/img/sprite.svg#email"></use></svg></a></li>
-                            <li><a href="#" title="Copy URL"><svg width="24" height="24"><use href="assets/img/sprite.svg#url"></use></svg></a></li>
+                            <li><a href="#copy" class="copy-link" title="Copy URL"><svg width="24" height="24"><use href="assets/img/sprite.svg#url"></use></svg></a></li>
                         </ul>
                     </div>
                 </div>
@@ -171,8 +171,14 @@
             <footer class="post__footer">
                 <p class="helpful">
                     <em>Was this article helpful?</em>
-                    <a href="#"><svg width="32" height="32"><use href="assets/img/sprite.svg#thumb-up"></use></svg></a>
-                    <a href="#"><svg width="32" height="32"><use href="assets/img/sprite.svg#thumb-down"></use></svg></a>
+                    <a class="helpful-up" href="#">
+                        <svg width="32" height="32"><use href="assets/img/sprite.svg#thumb"></use></svg>
+                        <svg width="32" height="32"><use href="assets/img/sprite.svg#thumb-active"></use></svg>
+                    </a>
+                    <a class="helpful-down" href="#">
+                        <svg width="32" height="32"><use href="assets/img/sprite.svg#thumb"></use></svg>
+                        <svg width="32" height="32"><use href="assets/img/sprite.svg#thumb-active"></use></svg>
+                    </a>
                 </p>
                 <hr>
                 <div class="meta-item meta-item--social">
@@ -182,7 +188,7 @@
                         <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Share on Facebook"><svg width="20" height="20"><use href="assets/img/sprite.svg#facebook"></use></svg></a></li>
                         <li><a href="https://x.com" target="_blank" rel="noopener noreferrer" title="Share on X"><svg width="20" height="20"><use href="assets/img/sprite.svg#x"></use></svg></a></li>
                         <li><a href="#" title="Share in email"><svg width="24" height="24"><use href="assets/img/sprite.svg#email"></use></svg></a></li>
-                        <li><a href="#" title="Copy URL"><svg width="24" height="24"><use href="assets/img/sprite.svg#url"></use></svg></a></li>
+                        <li><a href="#copy" class="copy-link" title="Copy URL"><svg width="24" height="24"><use href="assets/img/sprite.svg#url"></use></svg></a></li>
                     </ul>
                 </div>
             </footer>
@@ -234,7 +240,7 @@
                 <p>Android version is coming soon &mdash; join the waitlist to be the first to know.</p>
                 <form action="#" class="form form-subscribe form-validate" novalidate>
                     <div class="form-group"><input class="form-control" type="email" maxlength="50" required value="" placeholder="Enter email address"></div>
-                    <button type="submit" class="btn">Send</button>
+                    <button type="submit" class="btn"><span class="form-submit-text">Send</span></button>
                 </form>
             </section>
         </div>

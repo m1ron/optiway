@@ -11,11 +11,28 @@
   &-group {
     width: 100%;
     position: relative;
-    &::after {@include clearfix;}
+
+    &::after {
+      @include clearfix;
+    }
   }
 
   &-half {
     flex-basis: calc(50% - 8px)
+  }
+
+  &-success-message {
+    padding-left: 20px;
+    margin: 4px 0 0;
+    display: block;
+    position: relative;
+    font: 12px/1.5 $font-secondary;
+    letter-spacing: -.01em;
+    color: $color-green;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%2338a169' stroke-linecap='round' stroke-linejoin='round' d='M8 14.667c3.666 0 6.666-3 6.666-6.666s-3-6.667-6.666-6.667-6.667 3-6.667 6.667 3 6.666 6.667 6.666'/%3E%3Cpath stroke='%2338a169' stroke-linecap='round' stroke-linejoin='round' d='m5.167 8 1.887 1.887 3.78-3.774'/%3E%3C/svg%3E") no-repeat 1px 0;
+    cursor: default;
+    @include user-select;
+    @include user-drag;
   }
 
   &-error-message {
@@ -55,7 +72,10 @@
 
     &:focus {
       border-color: $color-blue;
-      &::placeholder {opacity: 0;}
+
+      &::placeholder {
+        opacity: 0;
+      }
     }
 
     &[disabled] {
@@ -66,10 +86,24 @@
     &.form-error {
       border-color: $color-red;
     }
+
+    &.form-success {
+      border-color: $color-green;
+    }
   }
 
   textarea {
     padding-top: 8px;
     resize: none;
+  }
+
+  &.form-valid {
+    button[type="submit"] {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M10 18.334c4.584 0 8.334-3.75 8.334-8.334S14.584 1.667 10 1.667 1.667 5.417 1.667 10s3.75 8.334 8.333 8.334'/%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6.458 10 2.358 2.358 4.725-4.716'/%3E%3C/svg%3E");
+
+      .form-submit-text {
+        opacity: 0;
+      }
+    }
   }
 }

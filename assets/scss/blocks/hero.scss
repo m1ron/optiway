@@ -100,6 +100,7 @@
 
       &--outline {
         color: $color-dark-gray;
+
         svg {
           transition: margin-left $effect;
         }
@@ -157,6 +158,7 @@
       transform: translateY(30px);
       transition: opacity 1s .1s ease, transform 1s .1s ease;
     }
+
     .hero__image {
       opacity: 0;
       transform: translateY(30px);

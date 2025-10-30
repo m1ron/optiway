@@ -53,7 +53,9 @@
       flex-basis: calc((100% - 40px) / 3);
     }
     @include media-breakpoint-down(lg) {
-      + .help__category {margin-top: 20px;}
+      + .help__category {
+        margin-top: 20px;
+      }
     }
 
     ul {
