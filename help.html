@@ -58,7 +58,10 @@
         </header>
 
         <form action="help.html" class="search">
-            <input class="form-control" name="s" type="search" value="" placeholder="Search" maxlength="30" autocomplete="off">
+            <div class="form-group">
+                <input class="form-control" name="s" type="search" value="" placeholder="Search" maxlength="30" autocomplete="off">
+                <p class="form-error-message">Timeout error / Article not found</p>
+            </div>
         </form>
 
         <div class="help">

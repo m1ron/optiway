@@ -27,12 +27,9 @@
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.5;
-    display: none;
+    display: flex;
     gap: 24px;
     cursor: default;
-    @include media-breakpoint-up(md) {
-      display: flex;
-    }
 
     em {
       display: flex;
@@ -98,10 +95,10 @@
       padding-top: 80px;
       padding-bottom: 20px;
       justify-content: center;
-      text-align: center;
+      //text-align: center;
 
       .post-header__data {
-        margin-top: 20px;
+        //margin-top: 20px;
         margin-bottom: 0;
         display: flex;
         justify-content: center;
@@ -112,7 +109,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
       }
     }
   }
